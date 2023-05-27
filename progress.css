@@ -1,0 +1,30 @@
+.progress-css {
+  width: 200px;
+  background-color: #123;
+  border-radius: 5rem;
+  position: relative;
+  background-clip: padding-box;
+  
+  --pss-fill: 50%;
+  --pss-color: #def;
+  background-image: linear-gradient(
+    to right,
+    var(--pss-color) var(--pss-fill), 
+    transparent var(--pss-fill)
+  );
+}
+
+.progress-css:after {
+  color: #def;
+  content: attr(data-pss);
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: calc(100% + 0.8rem);
+  
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+/* STYLES */
