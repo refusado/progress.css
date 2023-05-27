@@ -13,7 +13,7 @@ body {
   background-color: #456;
 }
 
-.progress-css {
+.pss-bar {
   font-family: sans-serif;
   font-size: 1rem;
   border: 1px solid #ffffff4a;
@@ -23,4 +23,10 @@ body {
 
 .bar-2 {
   height: 1rem;
+}
+
+.pss-rad {
+  padding: 0;
+  border: 1px solid #ffffff4a;
+  box-shadow: 0 2px 6px 0 #00000055;
 }

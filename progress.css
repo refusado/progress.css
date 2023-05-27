@@ -1,4 +1,4 @@
-.progress-css {
+.pss-bar {
   width: 200px;
   background-color: #123;
   border-radius: 5rem;
@@ -14,7 +14,7 @@
   );
 }
 
-.progress-css:after {
+.pss-bar:after {
   color: #def;
   content: attr(data-pss);
   display: inline-block;
@@ -27,4 +27,16 @@
   align-items: center;
 }
 
-/* STYLES */
+.pss-rad {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  background-color: #123;
+
+  --pss-fill: 65%;
+  --pss-color: #def;
+  background-image: conic-gradient(
+    transparent calc(100% - var(--pss-fill)),
+    var(--pss-color) 0
+  );
+}
