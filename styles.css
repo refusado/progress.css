@@ -1,11 +1,12 @@
 body {
-  padding: 0;
+  box-sizing: border-box;
+  padding: 100px;
   margin: 0;
   width: 100vw;
   height: 100vh;
   
   display: flex;
-  flex-direction: column;
+  flex-flow: column wrap;
   justify-content: center;
   align-items: center;
   gap: 20px;
@@ -26,7 +27,11 @@ body {
 }
 
 .pss-rad {
-  padding: 0;
   border: 1px solid #ffffff4a;
   box-shadow: 0 2px 6px 0 #00000055;
+}
+
+.bar-6 {
+  border: 0;
+  background-color: transparent;
 }
