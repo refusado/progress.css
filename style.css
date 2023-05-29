@@ -1,0 +1,69 @@
+body {
+  font-family: sans-serif;
+  background-color: #123;
+  color: #def;
+  width: min(800px, 100vw);
+  margin: 0 auto;
+  padding: 0 12px;
+  padding-bottom: 24px;
+  box-sizing: border-box;
+}
+
+h1 {
+  text-align: center;
+  margin: 42px 0;
+}
+
+h2 {
+  color: #789;
+}
+
+h3, a {
+  color: #b13;
+}
+
+code {
+  border-radius: 4px;
+}
+
+button {
+  border: 0;
+  padding: 0;
+  margin: 0 6px;
+}
+
+button > a {
+  background-color: #b13;
+  color: #def;
+  padding: 6px 12px;
+  border-radius: 3px;
+  text-decoration: none;
+}
+
+#github-strip {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: min(260px, 40vw);
+  height: min(260px, 40vw);
+  transform: translate(25%, -25%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#github-strip a {
+  transform: rotate(45deg);
+  background-color: #b13;
+  display: block;
+  color: #def;
+  padding: min(8px, 12vw);
+  font-size: min(16px, 3.5vw);
+  width: 400%;
+  border: 2px dashed #def;
+  outline: 4px solid #b13;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: bold;
+}
