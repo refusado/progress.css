@@ -1,22 +1,37 @@
 .pss-bar {
   width: 200px;
+  height: 1rem;
   border-radius: 10rem;
   position: relative;
   
-  --pss-fill: 50%;
+  --pss-value: 50;
   --pss-color: #123;
   background-color: #def;
   background-origin: border-box;
   background-image: linear-gradient(
-    to right,
-    var(--pss-color) var(--pss-fill), 
-    transparent var(--pss-fill)
+    90deg,
+    var(--pss-color) calc(100% / (100 / var(--pss-value))),
+    transparent 0%
   );
 }
 
-.pss-bar:after {
+.pss-bar::before {
   color: #def;
-  content: attr(data-pss);
+  content: attr(data-pss-i);
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: calc((100% * (var(--pss-value) / 100) / 2));
+  transform: translateX(-50%);
+
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.pss-bar::after {
+  color: #def;
+  content: attr(data-pss-o);
   display: inline-block;
   position: absolute;
   top: 0;
@@ -31,17 +46,24 @@
   width: 5rem;
   height: 5rem;
   border-radius: 50%;
-  
-  --pss-fill: 65%;
+
+  --pss-value: 65;
   --pss-color: #123;
   --pss-center: transparent;
   background-color: #def;
   background-origin: border-box;
   background-image:
-    radial-gradient(circle, var(--pss-center) calc(72% - 0.8rem), transparent 0),
+    radial-gradient(
+      circle,
+      var(--pss-center) calc(72% - 0.8rem),
+      transparent 0),
     conic-gradient(
-    transparent calc(100% - var(--pss-fill)),
-    var(--pss-color) 0
+      transparent calc(100% - 100% / (100 / var(--pss-value))),
+      var(--pss-color) 0
+    );
+  mask: radial-gradient(
+    circle,
+    var(--pss-center) calc(72% - 0.8rem),
+    #000 0
   );
-  mask: radial-gradient(circle, var(--pss-center) calc(72% - 0.8rem), #000 0);
 }
