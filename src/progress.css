@@ -1,11 +1,12 @@
 .pss-bar {
   width: 200px;
-  background-color: #def;
-  border-radius: 5rem;
+  border-radius: 10rem;
   position: relative;
   
   --pss-fill: 50%;
   --pss-color: #123;
+  background-color: #def;
+  background-origin: border-box;
   background-image: linear-gradient(
     to right,
     var(--pss-color) var(--pss-fill), 
@@ -27,19 +28,20 @@
 }
 
 .pss-rad {
-  width: 140px;
-  height: 140px;
+  width: 5rem;
+  height: 5rem;
   border-radius: 50%;
-  background-color: #def;
-
+  
   --pss-fill: 65%;
   --pss-color: #123;
   --pss-center: transparent;
+  background-color: #def;
+  background-origin: border-box;
   background-image:
-    radial-gradient(circle, var(--pss-center) calc(72% - 1rem), transparent 0),
+    radial-gradient(circle, var(--pss-center) calc(72% - 0.8rem), transparent 0),
     conic-gradient(
     transparent calc(100% - var(--pss-fill)),
     var(--pss-color) 0
   );
-  mask: radial-gradient(circle, var(--pss-center) calc(72% - 1rem), #000 0);
+  mask: radial-gradient(circle, var(--pss-center) calc(72% - 0.8rem), #000 0);
 }
