@@ -1,10 +1,11 @@
 .pss-bar {
+  display: flex;
   position: relative;
-  width: 10em;
+  width: 12em;
   height: 1.25em;
   padding-left: .5em;
   border-radius: 10em;
-  font-size: 1em;
+  font-size: .75em;
   color: #def;
 
   --pss-value: 50;
@@ -16,6 +17,7 @@
     var(--pss-color) calc(100% / (100 / var(--pss-value))),
     transparent 0%
   );
+  align-items: center;
 }
 
 .pss-bar::before {
@@ -34,7 +36,7 @@
   display: flex;
   position: absolute;
   height: 100%;
-  padding-left: .5em;
+  padding-left: .75em;
   color: #def;
   top: 0;
   left: 100%;
@@ -48,16 +50,18 @@
   border-radius: 50%;
   justify-content: center;
   align-items: center;
+  font-size: .75em;
 
   --pss-value: 65;
   --pss-color: #123;
   --pss-center: transparent;
+  --pss-width: .5em;
   background-color: #def;
   background-origin: border-box;
   background-image:
     radial-gradient(
       circle,
-      var(--pss-center) calc(72% - 0.8em),
+      var(--pss-center) calc(72% - var(--pss-width)),
       transparent 0),
     conic-gradient(
       transparent calc(100% - 100% / (100 / var(--pss-value))),
@@ -65,12 +69,7 @@
     );
   mask: radial-gradient(
     circle,
-    var(--pss-center) calc(72% - 0.8em),
+    var(--pss-center) calc(72% - var(--pss-width)),
     #000 0
   );
-}
-
-.pss-rad[data-pss-i], .pss-rad[data-pss-o] {
-  mask: unset;
-  position: relative;
 }

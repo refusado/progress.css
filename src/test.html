@@ -1,27 +1,39 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="progress.css">
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="progress.css" />
+  <link rel="stylesheet" href="styles.css" />
   <title>Test - Progress CSS</title>
 </head>
+
 <body>
   <div class="pss-bar bar-1" style="--pss-value: 83"></div>
-  <div class="pss-bar bar-1" style="--pss-value: 45" data-pss-i="45%"></div>
-  <div class="pss-bar bar-1" style="--pss-value: 56" data-pss-o="56%"></div>
-  <div class="pss-bar bar-2" style="--pss-value: 47; --pss-color: #70F"></div>
-  <div class="pss-bar bar-3" style="--pss-value: 72">
+  <div class="pss-bar bar-2" style="--pss-value: 45" data-pss-i="45%"></div>
+  <div class="pss-bar bar-3" style="--pss-value: 56" data-pss-o="56%"></div>
+  <div class="pss-bar bar-4" style="--pss-value: 47; --pss-color: #b13" data-pss-i="4.5/10"></div>
+  <div class="pss-bar bar-5" style="--pss-value: 72; --pss-color: #b13">
     72% complete
   </div>
 
-  <div class="pss-rad bar-4" style="--pss-value: 75; --pss-center: red">75%</div>
-  <div class="pss-rad bar-6" style="--pss-value: 66"></div>
-  <div class="pss-rad bar-4" style="--pss-value: 75"></div>
-  <div class="pss-rad bar-6" style="--pss-value: 66; --pss-center: #70F"></div>
-  <div class="pss-rad bar-5" style="--pss-value: 15; --pss-center: #70F"></div>
-  <div class="pss-rad bar-6" style="--pss-value: 43; --pss-color: red"></div>
+  <div class="pss-rad bar-6" style="--pss-value: 40; --pss-color: #b13; --pss-center: #123"></div>
+  <div class="pss-rad bar-7" style="--pss-value: 66; --pss-center: #b13">
+    66/100
+  </div>
+  <div class="pss-rad bar-8" style="--pss-value: 75; --pss-center: #456">
+    75%
+  </div>
+  <div class="pss-rad bar-9" style="
+        --pss-value: 20;
+        --pss-color: #b13;
+        --pss-center: #123;
+        background-color: transparent;
+      ">
+    2/10
+  </div>
 </body>
+
 </html>

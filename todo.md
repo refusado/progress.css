@@ -6,6 +6,7 @@
 - get the different types of bars
 - create styles for rounded bars
 - create pizza bars
+- improve color setters - left, right and center
 
 ---
 
@@ -32,11 +33,9 @@
   - progress bar value
   - bar color
   - bar width
-  - no center
   - center color
-  - label inside
-  - label outside
   - text inside
+  - hollow 
 
     \~ other styles ~
   - background color
@@ -48,4 +47,5 @@
   - horizontal rounded
   - radial flat
   - radial rounded
+  - radial [flat/rounded] hollow
   - radial pizza

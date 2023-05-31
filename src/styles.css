@@ -1,18 +1,23 @@
 body {
   box-sizing: border-box;
-  padding: 100px;
-  margin: 0;
+  display: flex;
   width: 100vw;
   height: 100vh;
-  
-  display: flex;
+  margin: 0;
+  padding: 100px;
+  font-family: sans-serif;
+  color: #def;
+  background-color: #456;
   flex-flow: column wrap;
   justify-content: center;
   align-items: center;
   gap: 20px;
-  
-  background-color: #456;
-  color: #def;
+}
 
-  font-size: 20px;
+.pss-bar {
+  border: 1px solid #789;
+  box-shadow: 0 2px 6px 0 #00000055;
+  height: 24px;
+  width: 200px;
+  font-size: 16px;
 }
