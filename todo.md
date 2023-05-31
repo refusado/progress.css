@@ -1,12 +1,10 @@
 # To do
 
 - create the progress bar by data-attribute instead class
-- set circular progress bar width dynamically
-- create labels for circular progress bars
 - get the different types of bars
-- create styles for rounded bars
 - create pizza bars
 - improve color setters - left, right and center
+- alternative without mask for non-hollow circular bars
 
 ---
 

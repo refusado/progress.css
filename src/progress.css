@@ -7,6 +7,7 @@
   border-radius: 10em;
   font-size: .75em;
   color: #def;
+  align-items: center;
 
   --pss-value: 50;
   --pss-color: #123;
@@ -17,7 +18,6 @@
     var(--pss-color) calc(100% / (100 / var(--pss-value))),
     transparent 0%
   );
-  align-items: center;
 }
 
 .pss-bar::before {
@@ -45,12 +45,13 @@
 
 .pss-rad {
   display: flex;
+  position: relative;
   width: 5em;
   height: 5em;
   border-radius: 50%;
+  font-size: .75em;
   justify-content: center;
   align-items: center;
-  font-size: .75em;
 
   --pss-value: 65;
   --pss-color: #123;
@@ -61,15 +62,40 @@
   background-image:
     radial-gradient(
       circle,
-      var(--pss-center) calc(72% - var(--pss-width)),
+      var(--pss-center) calc(71% - var(--pss-width)),
       transparent 0),
     conic-gradient(
       transparent calc(100% - 100% / (100 / var(--pss-value))),
       var(--pss-color) 0
     );
-  mask: radial-gradient(
-    circle,
-    var(--pss-center) calc(72% - var(--pss-width)),
-    #000 0
+}
+
+.pss-rad::before {
+  content: '';
+  position: absolute;
+  width: var(--pss-width);
+  height: 50%;
+  left: calc(50% - (var(--pss-width) / 2));
+  top: 0;
+  background-image: radial-gradient(
+    circle at 50% calc(var(--pss-width) / 2),
+    var(--pss-color) calc(var(--pss-width) / 2),
+    transparent 0
   );
+}
+
+.pss-rad::after {
+  content: '';
+  position: absolute;
+  width: var(--pss-width);
+  height: 50%;
+  left: calc(50% - (var(--pss-width) / 2));
+  top: 0;
+  background-image: radial-gradient(
+    circle at 50% calc(var(--pss-width) / 2),
+    var(--pss-color) calc(var(--pss-width) / 2),
+    transparent 0
+  );
+  transform-origin: 50% 100%;
+  transform: rotate(calc(360deg / (-100 / min(var(--pss-value), 100))));
 }

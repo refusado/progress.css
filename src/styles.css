@@ -4,14 +4,13 @@ body {
   width: 100vw;
   height: 100vh;
   margin: 0;
-  padding: 100px;
   font-family: sans-serif;
   color: #def;
   background-color: #456;
-  flex-flow: column wrap;
+  flex-flow: row wrap;
   justify-content: center;
   align-items: center;
-  gap: 20px;
+  gap: 56px;
 }
 
 .pss-bar {
@@ -20,4 +19,15 @@ body {
   height: 24px;
   width: 200px;
   font-size: 16px;
+  margin: 12px 0;
+}
+
+.pss-rad {
+  margin: 12px 0;
+  box-shadow: 0 2px 6px #00000055;
+}
+
+.bar-9 {
+  background-color: transparent;
+  box-shadow: none;
 }
