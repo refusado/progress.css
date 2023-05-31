@@ -1,4 +1,4 @@
-.pss-bar {
+.pss-bar, .pss-bars > * {
   display: flex;
   position: relative;
   width: 12em;
@@ -20,7 +20,10 @@
   );
 }
 
-.pss-bar::before, .pss-bar::after {
+.pss-bar::before,
+.pss-bar::after,
+.pss-bars > *::before,
+.pss-bars > *::after {
   display: flex;
   position: absolute;
   height: 100%;
@@ -30,18 +33,18 @@
   align-items: center;
 }
 
-.pss-bar::before {
+.pss-bar::before, .pss-bars > *::before {
   content: attr(data-pss-i);
   left: calc((100% * (min(var(--pss-value), 100) / 100) / 2));
   transform: translateX(-50%);
 }
 
-.pss-bar::after {
+.pss-bar::after, .pss-bars > *::after {
   padding-left: .75em;
   content: attr(data-pss-o);
 }
 
-.pss-rad {
+.pss-rad, .pss-rads > * {
   display: flex;
   position: relative;
   width: 5em;
@@ -68,7 +71,10 @@
     );
 }
 
-.pss-rad::before, .pss-rad::after {
+.pss-rad::before,
+.pss-rad::after,
+.pss-rads > *::before,
+.pss-rads > *::after {
   position: absolute;
   width: var(--pss-width);
   height: 50%;
@@ -82,7 +88,7 @@
   top: 0;
 }
 
-.pss-rad::after {
+.pss-rad::after, .pss-rads > *::after {
   transform-origin: 50% 100%;
   transform: rotate(calc(360deg / (-100 / min(var(--pss-value), 100))));
 }
