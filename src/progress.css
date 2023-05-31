@@ -1,9 +1,12 @@
 .pss-bar {
-  width: 200px;
-  height: 1rem;
-  border-radius: 10rem;
   position: relative;
-  
+  width: 10em;
+  height: 1.25em;
+  padding-left: .5em;
+  border-radius: 10em;
+  font-size: 1em;
+  color: #def;
+
   --pss-value: 50;
   --pss-color: #123;
   background-color: #def;
@@ -16,36 +19,35 @@
 }
 
 .pss-bar::before {
-  color: #def;
   content: attr(data-pss-i);
-  display: inline-block;
-  position: absolute;
-  top: 0;
-  left: calc((100% * (var(--pss-value) / 100) / 2));
-  transform: translateX(-50%);
-
-  height: 100%;
   display: flex;
+  position: absolute;
+  height: 100%;
+  top: 0;
+  left: calc((100% * (min(var(--pss-value), 100) / 100) / 2));
   align-items: center;
+  transform: translateX(-50%);
 }
 
 .pss-bar::after {
-  color: #def;
   content: attr(data-pss-o);
-  display: inline-block;
-  position: absolute;
-  top: 0;
-  left: calc(100% + 0.8rem);
-  
-  height: 100%;
   display: flex;
+  position: absolute;
+  height: 100%;
+  padding-left: .5em;
+  color: #def;
+  top: 0;
+  left: 100%;
   align-items: center;
 }
 
 .pss-rad {
-  width: 5rem;
-  height: 5rem;
+  display: flex;
+  width: 5em;
+  height: 5em;
   border-radius: 50%;
+  justify-content: center;
+  align-items: center;
 
   --pss-value: 65;
   --pss-color: #123;
@@ -55,7 +57,7 @@
   background-image:
     radial-gradient(
       circle,
-      var(--pss-center) calc(72% - 0.8rem),
+      var(--pss-center) calc(72% - 0.8em),
       transparent 0),
     conic-gradient(
       transparent calc(100% - 100% / (100 / var(--pss-value))),
@@ -63,7 +65,12 @@
     );
   mask: radial-gradient(
     circle,
-    var(--pss-center) calc(72% - 0.8rem),
+    var(--pss-center) calc(72% - 0.8em),
     #000 0
   );
+}
+
+.pss-rad[data-pss-i], .pss-rad[data-pss-o] {
+  mask: unset;
+  position: relative;
 }

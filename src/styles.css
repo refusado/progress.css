@@ -13,26 +13,6 @@ body {
   
   background-color: #456;
   color: #def;
-}
 
-.pss-bar {
-  font-family: sans-serif;
-  font-size: 1rem;
-  border: 1px solid #789;
-  box-shadow: 0 2px 6px 0 #00000055;
-  padding: 0.3rem 0.6rem;
-}
-
-.bar-2 {
-  height: 1rem;
-}
-
-.pss-rad {
-  border: 1px solid #ffffff4a;
-  box-shadow: 0 2px 6px 0 #00000055;
-}
-
-.bar-6 {
-  border: 0;
-  background-color: transparent;
+  font-size: 20px;
 }
