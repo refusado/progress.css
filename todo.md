@@ -3,8 +3,6 @@
 - create the progress bar by data-attribute instead class
 - get the different types of bars
 - create pizza bars
-- improve color setters - left, right and center
-- alternative without mask for non-hollow circular bars
 
 ---
 

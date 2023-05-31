@@ -1,3 +1,11 @@
+:root {
+  --pss-value: 65;
+  --pss-left: #123;
+  --pss-right: #def;
+  --pss-center: #b13;
+  --pss-width: .5em;
+}
+
 .pss-bar, .pss-bars > * {
   display: flex;
   position: relative;
@@ -10,9 +18,6 @@
   align-items: center;
   overflow: hidden;
 
-  --pss-value: 50;
-  --pss-left: #123;
-  --pss-right: #def;
   background-origin: border-box;
   background-image: linear-gradient(
     90deg,
@@ -65,11 +70,6 @@
   justify-content: center;
   align-items: center;
 
-  --pss-value: 65;
-  --pss-left: #123;
-  --pss-right: #def;
-  --pss-center: #b13;
-  --pss-width: .5em;
   background-origin: border-box;
   background-image:
     radial-gradient(
