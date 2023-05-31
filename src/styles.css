@@ -16,13 +16,18 @@ body {
 .pss-bar {
   border: 1px solid #789;
   box-shadow: 0 2px 6px 0 #00000055;
-  height: 24px;
-  width: 200px;
-  font-size: 16px;
   margin: 12px 0;
 }
 
 .pss-rad {
   margin: 12px 0;
   box-shadow: 0 2px 6px #00000055;
+}
+
+.pss-bars > *, .pss-rads > * {
+  margin-bottom: .75em;
+}
+
+.pss-rads > * {
+  background-color: transparent;
 }
