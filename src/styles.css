@@ -4,24 +4,25 @@ body {
   width: 100vw;
   height: 100vh;
   margin: 0;
-  font-family: sans-serif;
-  color: #def;
-  background-color: #456;
   flex-flow: row wrap;
   justify-content: center;
   align-items: center;
   gap: 56px;
 }
 
-.pss-bar {
-  border: 1px solid #789;
-  box-shadow: 0 2px 6px 0 #00000055;
+.pss-bar, .pss-bars > * {
+  outline: 1px solid #847b7bd2;
+  box-shadow: 0 2px 6px 0 #000000a0;
   margin: 12px 0;
 }
 
 .pss-rad {
+  width: 60px;
+  height: 60px;
   margin: 12px 0;
-  box-shadow: 0 2px 6px #00000055;
+  --pss-width: 3px;
+  font-size: 16px;
+  box-shadow: 0 2px 6px 0 #000000a0;
 }
 
 .pss-bars > *, .pss-rads > * {
