@@ -25,7 +25,7 @@
   background-origin: border-box;
   background-image: linear-gradient(
     90deg,
-    var(--pss-left) calc(100% / (100 / var(--pss-value))),
+    var(--pss-left) calc(100% / (100 / max(var(--pss-value), 0.001))),
     var(--pss-right) 0%
   );
 }
@@ -43,7 +43,7 @@
     var(--pss-left) 50%,
     transparent 0
   );
-  left: calc(100% / (100 / min(var(--pss-value), 100)));
+  left: calc(100% / (100 / min(max(var(--pss-value), 0.001), 100)));
   top: 0;
   transform: translateX(-50%);
 }
@@ -80,7 +80,7 @@
       var(--pss-center) calc(71% - var(--pss-width)),
       transparent 0),
     conic-gradient(
-      var(--pss-right) calc(100% - 100% / (100 / var(--pss-value))),
+      var(--pss-right) calc(100% - 100% / (100 / max(var(--pss-value), 0.001))),
       var(--pss-left) 0
     );
 }
@@ -106,5 +106,5 @@
 /* RADIAL BARS ROUNDED END */
 .pss-rad::after, .pss-rads > *::after {
   transform-origin: 50% 100%;
-  transform: rotate(calc(360deg / (-100 / min(var(--pss-value), 100))));
+  transform: rotate(calc(360deg / (-100 / min(max(var(--pss-value), 0.001), 100))));
 }
