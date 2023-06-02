@@ -1,8 +1,6 @@
 # To do
 
-- create the progress bar by data-attribute instead class
-- get the different types of bars
-- create pizza bars
+- pizza bars
 
 ---
 

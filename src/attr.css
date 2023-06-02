@@ -1,0 +1,107 @@
+/* HORIZONTAL BARS */
+[data-pss="flat"],
+[data-pss="flats"] > *,
+[data-pss="rounded"],
+[data-pss="roundeds"] > * {
+  display: flex;
+  position: relative;
+  width: 12em;
+  height: 1.45em;
+  padding-left: .45em;
+  border-radius: 10em;
+  font-size: .7em;
+  align-items: center;
+  overflow: hidden;
+
+  background-origin: border-box;
+  background-image: linear-gradient(
+    90deg,
+    var(--pss-left) calc(100% / (100 / max(var(--pss-value), 0.001))),
+    var(--pss-right) 0%
+  );
+}
+
+/* HORIZONTAL BAR ROUNDED */
+[data-pss="rounded"]::before,
+[data-pss="roundeds"] > *::before {
+  position: absolute;
+  height: 100%;
+  box-sizing: content-box;
+  aspect-ratio: 1/1;
+  content: '';
+  background-color: var(--pss-right);
+  background-image: radial-gradient(
+    circle at 0%,
+    var(--pss-left) 50%,
+    transparent 0
+  );
+  left: calc(100% / (100 / min(max(var(--pss-value), 0.001), 100)));
+  top: 0;
+  transform: translateX(-50%);
+}
+
+/* HORIZONTAL BARS LABEL */
+[data-pss="flat"]::before,
+[data-pss="flats"] > *::before 
+[data-pss="rounded"]::after,
+[data-pss="roundeds"] > *::after {
+  display: flex;
+  position: absolute;
+  height: 100%;
+  top: 0;
+  left: 100%;
+  align-items: center;
+  content: attr(aria-label);
+  left: calc((100% * (min(var(--pss-value), 100) / 100) / 2));
+  transform: translateX(-50%);
+}
+
+/* RADIAL BARS */
+[data-pss="rad-rounded"],
+[data-pss="rad-flat"],
+[data-pss="rad-roundeds"] > *,
+[data-pss="rad-flats"] > * {
+  display: flex;
+  position: relative;
+  width: 5em;
+  height: 5em;
+  border-radius: 50%;
+  font-size: .75em;
+  justify-content: center;
+  align-items: center;
+
+  background-origin: border-box;
+  background-image:
+    radial-gradient(
+      circle,
+      var(--pss-center) calc(71% - var(--pss-width)),
+      transparent 0),
+    conic-gradient(
+      var(--pss-right) calc(100% - 100% / (100 / max(var(--pss-value), 0.001))),
+      var(--pss-left) 0
+    );
+}
+
+/* RADIAL BARS ROUNDED START */
+[data-pss="rad-rounded"]::before,
+[data-pss="rad-rounded"]::after,
+[data-pss="rad-roundeds"] > *::before,
+[data-pss="rad-roundeds"] > *::after {
+  position: absolute;
+  width: var(--pss-width);
+  height: 50%;
+  content: '';
+  background-image: radial-gradient(
+    circle at 50% calc(var(--pss-width) / 2),
+    var(--pss-left) calc(var(--pss-width) / 2),
+    transparent 0
+  );
+  left: calc(50% - (var(--pss-width) / 2));
+  top: 0;
+}
+
+/* RADIAL BARS ROUNDED END */
+[data-pss="rad-rounded"]::after, [data-pss="rad-roundeds"] > *::after {
+  transform-origin: 50% 100%;
+  transform: rotate(calc(360deg / (-100 / min(max(var(--pss-value), 0.001), 100))));
+}
