@@ -1,8 +1,8 @@
 {
   "name": "progress.css",
-  "version": "0.2.1",
-  "description": "Create progress bars in your html with pure css by adding just one class",
-  "main": "progress.css",
+  "version": "1.0.0",
+  "description": "Create progress bars in your html with pure css by adding just one attribute",
+  "main": "progress.min.css",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/refusado/progress.css.git"

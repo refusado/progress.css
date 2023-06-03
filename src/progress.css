@@ -1,17 +1,15 @@
-/* DEFAULT STYLES */
-:root {
+/* HORIZONTAL BARS */
+[data-pss], [data-pss-container] > * {
+  /* DEFAULT STYLES */
   --pss-value: 65;
   --pss-left: #08a33e;
   --pss-right: #DDF4F9;
   --pss-center: #14975a;
   --pss-width: .4em;
   color: #f1fcfe;
-  background-color: #0A2E36;
-  font-family: 'Courier New', Courier, monospace;
-}
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  /* -- */
 
-/* HORIZONTAL BARS */
-[data-pss], [data-pss-container] > * {
   display: flex;
   position: relative;
   width: 12em;
@@ -101,7 +99,7 @@
 }
 
 /* RADIAL BARS ROUNDED END */
-[data-pss="rad"]::after, [data-pss="rad-container"] > *::after {
+[data-pss="rad"]::after, [data-pss-container="rad"] > *::after {
   transform-origin: 50% 100%;
   transform: rotate(calc(360deg / (-100 / min(max(var(--pss-value), 0.001), 100)) - 2deg));
 }

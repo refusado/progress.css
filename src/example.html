@@ -6,13 +6,27 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="progress.css" />
-  <link rel="stylesheet" href="attr.css" />
-  <link rel="stylesheet" href="styles.css" />
-  <title>Progress CSS - Testing</title>
+  <title>Progress CSS - Example</title>
 </head>
+<style>
+  body {
+    display: flex;
+    width: min(700px, 100vw);
+    margin: 0 auto;
+    color: #f1fcfe;
+    background-color: #0A2E36;
+    flex-flow: row wrap;
+    gap: 32px;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  [data-pss], [data-pss-container] > * {
+    margin: 12px 0;
+  }
+</style>
 
 <body>
-  
   <div>
     <div data-pss style="--pss-value: 94"></div>
     <div data-pss style="--pss-value: 48" aria-label="48%"></div>
