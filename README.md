@@ -94,7 +94,7 @@ Contributions are welcome! If you'd like to contribute to project, please follow
 
 Thank you for considering contributing to Progress.css! Your help is greatly appreciated.
 
-## Autor
+## Author
 
 Refu
 
