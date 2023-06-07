@@ -1,69 +1,113 @@
 body {
-  font-family: sans-serif;
-  background-color: #123;
-  color: #def;
-  width: min(800px, 100vw);
+  width: min(1000px, calc(100vw - 17px));
   margin: 0 auto;
-  padding: 0 12px;
-  padding-bottom: 24px;
+  margin-bottom: 32px;
   box-sizing: border-box;
+  font-family: sans-serif;
+  color: #DDF4F9;
+  background-color: #0A2E36;
+  overflow-x: hidden;
+}
+
+#github-strip {
+  display: flex;
+  width: min(260px, 40vw);
+  height: min(260px, 40vw);
+  position: fixed;
+  top: 0;
+  right: 0;
+  transform: translate(25%, -25%);
+  justify-content: center;
+  align-items: center;
+}
+
+#github-strip a {
+  display: block;
+  width: 400%;
+  padding: min(8px, 12vw);
+  border: 2px dashed #DDF4F9;
+  outline: 4px solid #08a33e;
+  background-color: #08a33e;
+  color: #DDF4F9;
+  font-size: min(16px, 3.5vw);
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: bold;
+  transform: rotate(45deg);
 }
 
 h1 {
+  margin: 40px 0 16px 0;
+  font-size: min(3rem, 15vw);
   text-align: center;
-  margin: 42px 0;
+}
+
+[data-pss-container]{
+  display: flex;
+  justify-content: center;
+  gap: min(16px, 2vw);
+}
+
+[data-pss-container] > * {
+  min-width: 8%;
+  font-size: 1.2rem;
+  width: 1rem;
+  --pss-width: .2rem;
+  --pss-center: #0A2E36;
 }
 
 h2 {
-  color: #789;
+  text-align: center;
+  color: #14975a;
+  margin-bottom: 32px;
 }
 
-h3, a {
-  color: #b13;
+button {
+  padding: 0;
+  border: 0;
+  background: none;
+}
+
+button > a {
+  margin: .25rem;
+  padding: .3rem .7rem;
+  border-radius: 3px;
+  background-color: #08a33e;
+  color: #DDF4F9;
+  text-decoration: none;
+}
+
+a {
+  transition: 200ms;
+}
+
+a:hover {
+  opacity: 0.9;
+}
+
+h3 {
+  color: #08a33e;
+}
+
+h4, a {
+  color: #14975a;
+}
+
+li > [data-pss] {
+  height: .5rem;
+  width: 3rem;
 }
 
 code {
   border-radius: 4px;
 }
 
-button {
-  border: 0;
-  padding: 0;
-  margin: 0 6px;
+tbody tr:nth-child(even) {
+  background-color: #ffffff12;
 }
 
-button > a {
-  background-color: #b13;
-  color: #def;
-  padding: 6px 12px;
-  border-radius: 3px;
-  text-decoration: none;
-}
-
-#github-strip {
-  position: fixed;
-  top: 0;
-  right: 0;
-  width: min(260px, 40vw);
-  height: min(260px, 40vw);
-  transform: translate(25%, -25%);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-#github-strip a {
-  transform: rotate(45deg);
-  background-color: #b13;
-  display: block;
-  color: #def;
-  padding: min(8px, 12vw);
-  font-size: min(16px, 3.5vw);
-  width: 400%;
-  border: 2px dashed #def;
-  outline: 4px solid #b13;
-  text-align: center;
-  text-transform: uppercase;
-  text-decoration: none;
-  font-weight: bold;
+hr {
+  margin: 32px 0;
+  border: 1px solid #08a33e56;
 }

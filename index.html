@@ -1,109 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Progress.css</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/github-dark.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/@highlightjs/cdn-assets@11.7.0/styles/github-dark.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/progress.css/progress.min.css" />
+  <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
   <h1>Progress.css</h1>
-  
-  <h2>Simple and dynamic way to create progress bars without javascript.</h2>
-  
-  <p>
-    The library aims to provide an easy and customizable implementation of progress bars with HTML allowing users to integrate them seamlessly into their projects and display a progress as they wish without much effort.
-  </p>
-    <button><a target="_blank" href="https://github.com/refusado/progress.css">Github</a></button>
-    <button><a target="_blank" href="https://github.com/refusado/progress.css/blob/main/progress.min.css">Download</a></button>
-  
-  <h3>Features</h3>
-  
-  <ul>
-    <li>Easily create horizontal and circular progress bars.</li>
-    <li>No javascript is required.</li>
-    <li>Label next to the progress bar.</li>
-    <li>Customize the fill color and percentage of the progress bars.</li>
-    <li>Insert text inside the progress bar.</li>
-    <li>Edit the progress bar as any element on the page without worrying about breaking styles.</li>
-    <li>Simple and intuitive implementation.</li>
-  </ul>
-  
-  <h3>Getting Started</h3>
-  
-  <p>To start using the Progress.css, follow these steps:</p>
-  
-  <ol>
-    <li>Include the CSS file in your project:</li>
-    
-    <pre><code>&lt;link rel="stylesheet" href="path/to/progress.css"&gt;</code></pre>
-    
-    <li>Add the appropriate class to your HTML elements:</li>
-    
-    <p>
-      <ul>
-        <li><code>pss-bar</code> for a horizontal progress bar.</li>
-        <li><code>pss-rad</code> for a circular progress indicator.</li>
-      </ul>
-    </p>
-    
-    <li>Customize the progress bar:</li>
-    
-    <p>You can set the <code>--pss-fill</code> and <code>--pss-color</code> CSS variables in <code>style=""</code> attribute to modify the percentage and fill color of the progress bar. Add a color in the center of the circular bars with <code>--pss-center</code> variable. To change the background color of any progress bar, just set the <code>background-color</code> property of the element as usual.</p>
-    
-    <p>If you want a label to the progress bar, add the <code>data-pss=""</code> attribute with the text you want in the value.</p>
-    
-    <p>To insert a text inside the progress bar elements, simply include the desired text content within the HTML element!</p>
-  </ol>
-  
-  <h3>Examples</h3>
-  
-  <p>Here are some examples demonstrating the usage of Progress.css:</p>
-  
-  <pre><code>&lt;!-- Minimum: just "--pss-fill" variable; --&gt;
-&lt;div class="pss-bar" style="--pss-fill: 75%"&gt;&lt;/div&gt;
 
-&lt;!-- Setting the bar color: add "--pss-color" variable; --&gt;
-&lt;div class="pss-bar" style="--pss-fill: 75%; --pss-color: #b13"&gt;&lt;/div&gt;
+  <div data-pss-container="rad">
+    <div style="--pss-value: 0">0/4</div>
+    <div style="--pss-value: 25">1/4</div>
+    <div style="--pss-value: 50">2/4</div>
+    <div style="--pss-value: 75">3/4</div>
+    <div style="--pss-value: 100">4/4</div>
+  </div>
 
-&lt;!-- Adding a label: insert "data-pss" attribute --&gt;
-&lt;div class="pss-bar" style="--pss-fill: 18%" data-pss="18%"&gt;&lt;/div&gt;
+  <h2>Infinite progress bars just by adding an attribute ✨</h2>
 
-&lt;!-- Inserting a text: put the text inside the element tag --&gt;
-&lt;div class="pss-bar" style="--pss-fill: 72%"&gt;72% complete&lt;/div&gt;
-
-&lt;!-- Radial minimum: using "pss-rad" class instead "pss-bar" --&gt;
-&lt;div class="pss-rad" style="--pss-fill: 81%"&gt;&lt;/div&gt;
-
-&lt;!-- Radial center color: add "pss-center" variable --&gt;
-&lt;div class="pss-rad bar-5" style="--pss-fill: 15%; --pss-center: #70F"&gt;&lt;/div&gt;</code></pre>
-  
-  <h3>Contributing</h3>
-  
-  <p>Contributions are welcome! If you'd like to contribute to the project, please follow these steps:</p>
-  
-  <ol>
-    <li>Fork the repository and clone it to your local machine.</li>
-    <li>Make your changes, whether it's a bug fix, feature enhancement, or documentation improvement.</li>
-    <li>Test your changes to ensure they work as intended.</li>
-    <li>Commit your changes with messages.</li>
-    <li>Push your changes to your forked repository.</li>
-    <li>Submit a pull request to the main repository.</li>
-  </ol>
-  
-  <p>Thank you for considering contributing to Progress.css! Your help is greatly appreciated.</p>
-  
-  <h3>License</h3>
-  
-  <p>This project is licensed under the MIT License. See the <a target="_blank" href="https://github.com/refusado/progress.css/blob/main/LICENSE">LICENSE</a> file for more information about the terms of use.</p>
+  <p>A simple and dynamic way to create horizontal and/or circular progress bars in your HTML <strong>without javascript</strong>.You can customize it however you like, but only one attribute is needed to make the magic happen 😌 🪄 </p>
+  <button><a target="_blank" href="https://github.com/refusado/progress.css">Github</a></button>
+  <button><a target="_blank" href="https://github.com/refusado/progress.css/blob/main/progress.min.css">Download</a></button>
 
   <div id="github-strip">
     <a target="_blank" href="https://github.com/refusado/progress.css">Contribute</a>
   </div>
 
-  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
-  <script>hljs.highlightAll();</script>
+  <h3>🦾 Features</h3>
+  <ul>
+    <li>Easily create horizontal and circular progress bars.</li>
+    <li>No javascript is required.</li>
+    <li>Insert labels/texts.</li>
+    <li>Customize colors and sizes quickly and easily.</li>
+    <li>Its not necessary to modify the HTML, only one element to add the attribute.</li>
+    <li>Edit the progress bar as any element on the page without worrying about breaking styles.</li>
+    <li>Create groups of multiple progress bars.</li>
+    <li>Simple and intuitive implementation.</li>
+  </ul>
+
+  <h3>🔨 Getting Started</h3>
+  <p>To start using the Progress.css, follow these steps:</p>
+
+  <ol>
+    <li><span data-pss style="--pss-value: 33"></span> Include the CSS file in your project:</li>
+    <section>
+      <h4>Using npm</h4>
+      <p>Install:</p>
+      <pre><code class="language-shell">npm install progress.css</code></pre>
+      <p>And include the file in your html:</p>
+      <pre><code class="language-html">&lt;link rel="stylesheet" href="path/to/progress.css"&gt;</code></pre>
+
+      <h4>Via CDN</h4>
+      <p>You can also just include the file in your html via CDN without installing: </p>
+      <pre><code class="language-html">&lt;link rel="stylesheet" href="https://unpkg.com/progress.css/progress.min.css"&gt;</code></pre>
+      <p>Or:</p>
+      <pre><code class="language-html">&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/refusado/progress.css/progress.min.css"&gt;</code></pre>
+    </section>
+
+    <li><span data-pss style="--pss-value: 66"></span> Make your element a progress bar:</li>
+    <section>
+      <h4>One by one</h4>
+      <p>Add the <code class="language-html">data-pss</code> attribute to your HTML tag and it will become a progress bar. To choose the percentage, type the value of the percentage into the CSS variable <code class="language-html">--pss-value</code>. <strong>⚠️ Do not put the "%" symbol, just the number.</strong></p>
+      <pre><code class="language-html">&lt;div data-pss style="--pss-value: 94"&gt;&lt;/div&gt;</code></pre>
+
+      <h4>Many at once</h4>
+      <p>If you want to style several at once, use the <code class="language-html">data-pss-container</code> attribute on the container of the elements you want to turn into progress bars.</p>
+<pre><code class="language-html">&lt;div data-pss-container&gt;
+  &lt;div style="--pss-value: 25"&gt;&lt;/div&gt;
+  &lt;div style="--pss-value: 50"&gt;&lt;/div&gt;
+  &lt;div style="--pss-value: 75"&gt;&lt;/div&gt;
+  &lt;div style="--pss-value: 100"&gt;&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+    </section>
+
+    <li><span data-pss style="--pss-value: 100"></span> Customize the progress bar:</li>
+    <section>
+      <h4>Horizontal and circular bars</h4>
+      <p>The <code class="language-html">data-pss</code> attribute will create a horizontal progress bar by default, but if you want a radial progress bar instead, add the value "rad" to this attribute.</p>
+      <pre><code class="language-html">&lt;div data-pss="rad" style="--pss-value: 30"&gt;&lt;/div&gt;</code></pre>
+
+      <h4>Variables</h4>
+      <p>These are the CSS variables that define the progress bar settings, they all have a default value but can be changed by reassigning the variable value. This can be done either in the document styles CSS file or with inline CSS.</p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Variable</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code class="language-html">--pss-value</code></td>
+            <td>Percentage filled. Default: <strong>65</strong></td>
+          </tr>
+          <tr>
+            <td><code class="language-html">--pss-left</code></td>
+            <td>Color of the left fill. Default: <strong>#08a33e</strong></td>
+          </tr>
+          <tr>
+            <td><code class="language-html">--pss-right</code></td>
+            <td>Color of the right fill. Default: <strong>#DDF4F9</strong></td>
+          </tr>
+          <tr>
+            <td><code class="language-html">--pss-center</code></td>
+            <td>
+              Center color of radial progress bars. Default:
+              <strong>#14975a</strong>
+            </td>
+          </tr>
+          <tr>
+            <td><code class="language-html">--pss-width</code></td>
+            <td>Radial progress bar width. Default: <strong>.4em</strong></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h4>Texts/labels</h4>
+      <p>To add text to a horizontal progress bar, use the <code class="language-html">aria-label="[text]"</code> attribute. You can also add the text inside the element's tag, the difference is that this text will not be centered inside the filled part of the bar. It's recommended that you use the first method. </p>
+      <pre><code class="language-html">&lt;div data-pss style="--pss-value: 48" aria-label="48%"&gt;&lt;/div&gt;</code></pre>
+      <p>For radial progress bars, there is no additional attribute, just place your text inside the element.</p>
+      <pre><code class="language-html">&lt;div data-pss="rad" style="--pss-value: 80"&gt;8/10&lt;/div&gt;</code></pre>
+    </section>
+  </ol>
+
+  <h3>👥 Contributing</h3>
+  <p>Contributions are welcome! If you'd like to contribute to the project, please follow these steps:</p>
+  <ol>
+    <li><a href="https://github.com/refusado/progress.css/fork">Fork the repository </a>and clone it to your local machine.</li>
+    <li>Make your changes, whether it's a bug fix, feature enhancement, or documentation improvement.</li>
+    <li>Test your changes to ensure they work as intended.</li>
+    <li>Commit your changes with descriptive messages.</li>
+    <li>Push your changes to your forked repository.</li>
+    <li>Submit a pull request to the main repository.</li>
+  </ol>
+  <p>Thank you for considering contributing to Progress.css! Your help is greatly appreciated. </p>
+
+  <h3>🖌 Author</h3>
+  <p>Progress.css was started by <a href="https://github.com/refusado">Refu</a>, but it is a 100% open source project and anyone can contribute to the development. If you are interested in helping, open your pull request or issue in the <a href="https://github.com/refusado/progress.css">github repository</a>.</p>
+
+  <h3>🔓 License</h3>
+  <p>This project is licensed under the MIT License. See the <a href="https://github.com/refusado/progress.css/blob/main/LICENSE">LICENSE</a> file for more information about the terms of use. </p>
+
+  <hr>
+  
+  <p>Don't like this page? <b><a href="https://github.com/refusado/progress.css/tree/gh-pages" target="_blank">Edit it!</a></b></p>
+
+  <script src="https://unpkg.com/@highlightjs/cdn-assets@11.7.0/highlight.min.js"></script>
+  <script>
+    hljs.highlightAll();
+  </script>
 </body>
+
 </html>
