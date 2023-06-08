@@ -1,6 +1,6 @@
 {
   "name": "progress.css",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Create cicurlar or horizontal progress bars with pure css with just one attribute",
   "main": "progress.min.css",
   "repository": {
