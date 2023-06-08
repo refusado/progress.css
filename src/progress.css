@@ -3,8 +3,6 @@
   --pss-value: 65;
   --pss-left: #08a33e;
   --pss-right: #DDF4F9;
-  --pss-center: #14975a;
-  --pss-width: .4em;
   font-size: .7em;
   color: #f1fcfe;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -12,6 +10,10 @@
 }
 [data-pss="rad"], [data-pss-container="rad"] {
   font-size: .8em;
+  --pss-width: .4em;
+  --pss-left: #DDF4F9;
+  --pss-right: #08a33e;
+  --pss-center: #14975a;
 }
 /* -- */
 
@@ -83,7 +85,7 @@
       var(--pss-center) calc(70.71% - var(--pss-width) - 0.5px),
       transparent calc(70.71% - var(--pss-width))),
     conic-gradient(
-      var(--pss-right) calc(100% - 100% / (100 / max(var(--pss-value), 0.001))),
+      var(--pss-right) calc(100% / (100 / max(var(--pss-value), 0.001))),
       var(--pss-left) 0
     );
 }
@@ -96,11 +98,11 @@
   width: 50%;
   height: 100%;
   background-image: radial-gradient(
-    circle at 0% calc(var(--pss-width) / 2 + 0.1%),
-    var(--pss-left) calc(var(--pss-width) / 2 + 0.05%),
+    circle at 100% calc(var(--pss-width) / 2 + 0.1%),
+    var(--pss-right) calc(var(--pss-width) / 2 + 0.05%),
     transparent calc(var(--pss-width) / 2 + 0.15%)
   );
-  left: 50%;
+  left: 0;
   top: 0;
   transform: unset;
 }
@@ -108,11 +110,11 @@
 /* RADIAL BARS ROUNDED END */
 [data-pss="rad"]::after, [data-pss-container="rad"] > *::after {
   background-image: radial-gradient(
-    circle at 100% calc(var(--pss-width) / 2 + 0.1%),
-    var(--pss-left) calc(var(--pss-width) / 2 + 0.05%),
+    circle at 0% calc(var(--pss-width) / 2 + 0.1%),
+    var(--pss-right) calc(var(--pss-width) / 2 + 0.05%),
     transparent calc(var(--pss-width) / 2 + 0.15%)
   );
-  left: 0;
-  transform-origin: 100% 50%;
-  transform: rotate(calc(360deg / (-100 / min(max(var(--pss-value), 0.001), 100))));
+  left: 50%;
+  transform-origin: 0% 50%;
+  transform: rotate(calc(360deg / (100 / min(max(var(--pss-value), 0.001), 100))));
 }
