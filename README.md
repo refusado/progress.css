@@ -1,17 +1,18 @@
 
-![Demo](./assets/banner.png)
-A simple and dynamic way to create horizontal and/or circular progress bars **without javascript**. The library aims to provide an easy and customizable implementation of progress bars with HTML allowing users to integrate them seamlessly into their projects and display a progress as they wish without much effort.
+![Progress.css](./assets/banner.png)
+A simple and dynamic way to create horizontal and/or circular progress bars in your HTML without javascript.You can customize it however you like, but only one attribute is needed to make the magic happen 😌 🪄 
 
-## Features
+## 🦾 Features
 - Easily create horizontal and circular progress bars.
 - No javascript is required.
 - Insert labels/texts.
 - Customize colors and sizes quickly and easily.
+- Its not necessary to modify the HTML, only one element to add the attribute.
 - Edit the progress bar as any element on the page without worrying about breaking styles.
-- Create groups of multiple progress bars
+- Create groups of multiple progress bars.
 - Simple and intuitive implementation.
 
-## Getting Started
+## 🔨 Getting Started
 To start using the Progress.css, follow these steps:
 
 1. Include the CSS file in your project:
@@ -29,13 +30,15 @@ To start using the Progress.css, follow these steps:
     You can also just include the file in your html via CDN without installing.
     ```html
     <link rel="stylesheet" href="https://unpkg.com/progress.css/progress.min.css">
-    <!-- Or -->
+    ```
+    Or:
+    ```
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/refusado/progress.css/progress.min.css">
     ```
 
 2. Make your element a progress bar:
     #### One by one
-    Add the `data-pss` attribute to your HTML tag and it will become a progress bar. To choose the percentage, type the value of the percentage into the CSS variable `--pss-value`. ⚠️ Do not put the `%` symbol, just the number.
+    Add the `data-pss` attribute to your HTML tag and it will become a progress bar. To choose the percentage, type the value of the percentage into the CSS variable `--pss-value`. ⚠️ Do not put the "%" symbol, just the number.
     ```html
     <div data-pss style="--pss-value: 94"></div>
     ```
@@ -60,7 +63,7 @@ To start using the Progress.css, follow these steps:
       <div data-pss="rad" style="--pss-value: 30"></div>
     ```
     #### Variables
-    These are the CSS variables that define the progress bar settings, they all have a default value but can be changed by reassigning the variable value. This can be done either in the document styles CSS file or in inline CSS.
+    These are the CSS variables that define the progress bar settings, they all have a default value but can be changed by reassigning the variable value. This can be done either in the document styles CSS file or with inline CSS.
 
     | Variable                   | Description |
     |----------------------------|-------------|
@@ -81,11 +84,11 @@ To start using the Progress.css, follow these steps:
     <div data-pss="rad" style="--pss-value: 80">8/10</div>
     ```
 
-## Contributing
+## 👥 Contributing
 
 Contributions are welcome! If you'd like to contribute to project, please follow these steps:
 
-1. Fork the repository and clone it to your local machine.
+1. [Fork the repository](https://github.com/refusado/progress.css/fork)  and clone it to your local machine.
 2. Make your changes, whether it's a bug fix, feature enhancement, or documentation improvement.
 3. Test your changes to ensure they work as intended.
 4. Commit your changes with messages.
@@ -94,16 +97,12 @@ Contributions are welcome! If you'd like to contribute to project, please follow
 
 Thank you for considering contributing to Progress.css! Your help is greatly appreciated.
 
-## Author
+## 🖌 Contributors
 
-Refu
+<a href="https://github.com/refusado/progress.css/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=refusado/progress.css" />
+</a>
 
-- [Discord](https://discord.com/users/412685400847679508)
-- [Github](https://github.com/refusado)
-- [Youtube](https://www.youtube.com/@refusado)
-- [Email](mailto:refusado@gmail.com)
-- [Twitter](https://twitter.com/refusado)
-
-## License
+## 🔓 License
 
 This project is licensed under the  MIT License. See the [LICENSE](https://github.com/refusado/progress.css/blob/main/LICENSE) file for more information about the terms of use.
