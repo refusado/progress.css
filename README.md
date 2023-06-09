@@ -1,6 +1,16 @@
 
 ![Progress.css](./assets/banner.png)
+
+<details>
+  <summary><b>Example</b></summary>
+  
+  https://github.com/refusado/progress.css/assets/89546855/c932e2c3-cc4f-40d2-9ede-20c07b465164
+
+</details>
+
 A simple and dynamic way to create horizontal and/or circular progress bars in your HTML without javascript.You can customize it however you like, but only one attribute is needed to make the magic happen 😌 🪄 
+
+[**Live demo 📎**](https://codepen.io/pen?template=PoxwVQM)
 
 ## 🦾 Features
 - Easily create horizontal and circular progress bars.
@@ -32,8 +42,13 @@ To start using the Progress.css, follow these steps:
     <link rel="stylesheet" href="https://unpkg.com/progress.css/progress.min.css">
     ```
     Or:
-    ```
+    ```html
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/refusado/progress.css/progress.min.css">
+    ```
+    #### CSS import 
+    Import a CDN url into your css file
+    ```css
+    @import url(https://unpkg.com/progress.css/progress.min.css);
     ```
 
 2. Make your element a progress bar:
