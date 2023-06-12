@@ -1,16 +1,19 @@
 
 ![Progress.css](./assets/banner.png)
 
-<details>
-  <summary><b>Example</b></summary>
-  
-  https://github.com/refusado/progress.css/assets/89546855/c932e2c3-cc4f-40d2-9ede-20c07b465164
-
-</details>
-
 A simple and dynamic way to create horizontal and/or circular progress bars in your HTML without javascript.You can customize it however you like, but only one attribute is needed to make the magic happen 😌 🪄 
 
-[**Live demo 📎**](https://codepen.io/pen?template=PoxwVQM)
+## 👀 Demo 
+
+  
+[**Click here to try it on Codepen!**](https://codepen.io/pen?template=PoxwVQM)
+
+<details>
+  <summary>Show video</summary>
+  
+  https://github.com/refusado/progress.css/assets/89546855/09c44cb6-c1a2-4ebc-8c52-3ffc0721ceb0
+
+</details>
 
 ## 🦾 Features
 - Easily create horizontal and circular progress bars.
