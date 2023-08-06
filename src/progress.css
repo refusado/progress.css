@@ -41,11 +41,11 @@
     /* Makes the division occur at the percentage of --pss-value */
     /* max() function ensure that the minimum value of --pss-value are 0.001 */
     var(--pss-left) calc(100% / (100 / max(var(--pss-value), 0.001))),
-    var(--pss-right) 0%
+    var(--pss-right) 0
   );
 }
 
-/* Creates a pseudo element with a circle in the division of the cotnainer */
+/* Creates a pseudo element with a circle in the division of the container */
 [data-pss]::before, [data-pss-container] > *::before {
   position: absolute;
   height: 100%;
@@ -59,7 +59,7 @@
   transform: translateX(-50%);
   /* Makes the background a circle with de --pss-left color */
   background-image: radial-gradient(
-    circle at 0%,
+    circle at 0,
     var(--pss-left) 50%,
     var(--pss-right) 0
   );
