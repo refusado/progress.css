@@ -155,9 +155,56 @@
   
   <p>Don't like this page? <b><a href="https://github.com/refusado/progress.css/tree/gh-pages" target="_blank">Edit it!</a></b></p>
 
+  <button id="theme-toggle" class="theme-toggle-btn" aria-label="Change theme">
+    <span id="theme-icon">☀️</span><span id="theme-text">Light mode</span>
+  </button>
+
   <script src="https://unpkg.com/@highlightjs/cdn-assets@11.7.0/highlight.min.js"></script>
   <script>
     hljs.highlightAll();
+
+    document.querySelectorAll('pre').forEach(pre => {
+      const copyBtn = document.createElement('button');
+      copyBtn.className = 'copy-code-btn';
+      copyBtn.innerText = 'Copy';
+
+      copyBtn.addEventListener('click', () => {
+        const codeText = pre.querySelector('code') ? pre.querySelector('code').innerText : pre.innerText;
+        navigator.clipboard.writeText(codeText).then(() => {
+          copyBtn.innerText = 'Copied!';
+          copyBtn.classList.add('copied');
+          setTimeout(() => { copyBtn.innerText = 'Copy'; copyBtn.classList.remove('copied'); }, 2000);
+        });
+      });
+
+      pre.appendChild(copyBtn);
+    });
+
+    const themeToggleBtn = document.getElementById('theme-toggle');
+    const themeIcon = document.getElementById('theme-icon');
+    const themeText = document.getElementById('theme-text');
+    const updateThemeUI = (isLight) => {
+      if (isLight) {
+        document.body.classList.add('light-mode');
+        themeIcon.innerText = '🌙';
+        themeText.innerText = 'Dark mode';
+      } else {
+        document.body.classList.remove('light-mode');
+        themeIcon.innerText = '☀️';
+        themeText.innerText = 'Light mode';
+      }
+    }
+
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'light') {
+      updateThemeUI(true);
+    }
+
+    themeToggleBtn.addEventListener('click', () => {
+      const isLight = document.body.classList.toggle('light-mode');
+      localStorage.setItem('theme', isLight ? 'light' : 'dark');
+      updateThemeUI(isLight);
+    })
   </script>
 </body>
 
